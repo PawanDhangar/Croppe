@@ -1,8 +1,9 @@
 import express from 'express';
 import * as dotenv from 'dotenv';
 import cors from 'cors';
-
 import connectDB from './mongodb/connect.js';
+import userRoutes from "./routes/users.js";
+import authRoutes from "./routes/auth.js";
 
 dotenv.config();
 
@@ -16,6 +17,15 @@ app.get('/', async (req, res) => {
     message: 'Hello from Croppe',
   });
 });
+
+
+// routes
+app.use("/api/users", userRoutes);
+app.use("/api/auth", authRoutes);
+
+
+
+
 
 const startServer = async () => {
   try {
