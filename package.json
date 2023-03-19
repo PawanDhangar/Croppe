@@ -1,27 +1,25 @@
 {
-  "name": "croppe",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "my-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node server/index.js",
-    "dev":"nodemon server/index.js"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lalitkumawat1m/Croppe.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/lalitkumawat1m/Croppe/issues"
-  },
-  "homepage": "https://github.com/lalitkumawat1m/Croppe#readme",
   "dependencies": {
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "mongoose": "^7.0.2",
-    "nodemon": "^2.0.21"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.9.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react": "^3.1.0",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.7",
+    "vite": "^4.2.0"
   }
 }
