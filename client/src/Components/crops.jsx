@@ -26,9 +26,9 @@ const Crops = () => {
     setImage(event.target.files[0]);
   };
   return (
-    <div className="Product mt-[500px] " id="product">
+    <div className="Product mt-[20px] " id="product">
     <div className=" ml-3 mr-3 flex flex-col items-center justify-center h-screen">
-      <form onSubmit={handleSubmit} className="w-full max-w-lg">
+      <form onSubmit={handleSubmit} className="w-full max-w-lg  ">
         <div className="flex flex-wrap -mx-3 mb-6">
           <div className="w-full px-3">
             <label htmlFor="title" className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">

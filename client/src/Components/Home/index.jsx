@@ -8,13 +8,12 @@ import About from '../about'
 import Crops from '../crops'
 import Contact from '../contact'
 
-const home = () => {
+const Home = () => {
     return (
         <div>
             <Navbar />
             <MainPage />
             <Service />
-            <Crops />
             <About />
             <Contact/>
             <Footer />
@@ -22,4 +21,4 @@ const home = () => {
     )
 }
 
-export default home
+export default Home;
