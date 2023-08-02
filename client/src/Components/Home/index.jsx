@@ -6,16 +6,14 @@ import Footer from '../footer'
 import Service from '../service'
 import About from '../about'
 import Crops from '../crops'
-import Contact from '../contact'
+// import Contact from '../Contact'
 
 const Home = () => {
     return (
-        <div>
-            <Navbar />
+        <div>            
             <MainPage />
             <Service />
             <About />
-            <Contact/>
             <Footer />
         </div>
     )

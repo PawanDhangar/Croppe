@@ -1,7 +1,7 @@
 import { useState } from "react";
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
-
+import { Link } from "react-router-dom";
+// import Home from '../../pages/home/Home'
 
 const Navbar = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -10,11 +10,23 @@ const Navbar = () => {
     setIsVisible(!isVisible);
   }
 
+  // return (
+  //   <nav>
+  //     <ul>
+  //       <li>
+  //         <Link to="/Home" className="nav-link">
+  //           Home
+  //         </Link>
+  //       </li>
+  //     </ul>
+  //   </nav>
+  // )
+
   return (
     <div className="App">
       <nav className="bg-white border-gray-200 px-2 sm:px-4 py-1.5  dark:bg-gray-600">
         <div className="container flex flex-wrap items-center justify-between mx-auto">
-          <a href="https://flowbite.com/" className="flex items-center">
+          <Link to="/" className="flex items-center">
             <img
               src="https://flowbite.com/docs/images/logo.svg"
               className="h-6 mr-3 sm:h-9"
@@ -23,7 +35,7 @@ const Navbar = () => {
             <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
               CropPe
             </span>
-          </a>
+          </Link>
           <div className="flex md:order-2 space-x-3">
             <Link to="/login">
               <button
@@ -68,7 +80,6 @@ const Navbar = () => {
               </svg>
             </button>
           </div>
-<<<<<<< HEAD
           <div
             className={`items-center justify-between w-full md:flex md:w-auto md:order-1 ${
               isVisible ? "" : "hidden"
@@ -77,80 +88,45 @@ const Navbar = () => {
           >
             <ul className="flex flex-col p-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-600 md:dark:bg-gray-600 dark:border-gray-500">
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/Home"
                   className="home block text-xl py-2 pl-4pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
                   aria-current="page"
                 >
                   Home
-                </a>
-=======
-          <div className={`items-center justify-between w-full md:flex md:w-auto md:order-1 ${isVisible ? '' : 'hidden'}`} id="navbar-cta">
-            <ul className="flex flex-col p-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-600 md:dark:bg-gray-600 dark:border-gray-500">        
-           
-            <Link
-            to="/crop"
-            smooth={true}
-            duration={500}>
-              <li>
-                <a  className="block text-xl py-2 pl-4pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Home</a>
->>>>>>> c95893844e49f4b64423219109a0f4cce9b2ded4
+                </Link>
               </li>
-              </Link>
-
-            <Link
-            to="/about"
-            smooth={true}
-            duration={500} >
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/About"
                   className="about block  text-xl py-2 pl-4 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                 >
                   About
-                </a>
+                </Link>
               </li>
-              </Link>
-
-            <Link
-            to="/service"
-            smooth={true}
-            duration={500}>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/Service"
                   className="services block text-xl py-2 pl-4 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                 >
                   Services
-                </a>
+                </Link>
               </li>
-          </Link>
-
-            <Link
-            to="/contact"
-            smooth={true}
-            duration={500}>
               <li>
-<<<<<<< HEAD
-                <a
-                  href="#"
+                <Link
+                  to="/Contact"
                   className="contact block text-xl py-2 pl- 4pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                 >
                   Contact
-                </a>
+                </Link>
               </li>
-=======
-                <a href="#" className="block text-xl py-2 pl- 4pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
-              </li> 
-              </Link>
-
->>>>>>> c95893844e49f4b64423219109a0f4cce9b2ded4
             </ul>
           </div>
         </div>
       </nav>
     </div>
   );
+
 };
 
 export default Navbar;
