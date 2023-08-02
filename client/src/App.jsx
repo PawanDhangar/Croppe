@@ -1,18 +1,11 @@
-import { Route, Routes, Navigate } from "react-router-dom";
+import React from 'react';
 import './App.css'
-import Signup from "./components/Signup";
-import Login from "./components/Login";
-import Home from "./components/Home";
+import MyRoutes from './Components/MyRoutes';
 
 function App() {
-    const user = localStorage.getItem("token");
+    // const user = localStorage.getItem("token");
     return (
-        <Routes>
-            {<Route path="/" exact element={<Home />} />}
-            <Route path="/signup" exact element={<Signup />} />
-            <Route path="/login" exact element={<Login />} />
-        </Routes>
-
+        <MyRoutes/>
     );
 }
 
