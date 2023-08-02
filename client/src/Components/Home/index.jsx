@@ -8,16 +8,15 @@ import About from '../about'
 import Crops from '../crops'
 // import Contact from '../Contact'
 
-const home = () => {
+const Home = () => {
     return (
         <div>            
             <MainPage />
             <Service />
-            <Crops />
             <About />
             <Footer />
         </div>
     )
 }
 
-export default home
+export default Home;

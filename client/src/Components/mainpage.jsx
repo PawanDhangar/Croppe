@@ -1,8 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const MainPage = () => {
   return (
-    
+    <section className="Mainpage" id="mainpage">
         <div className=" bg-gray-100 grid lg:grid-cols-2">
         <div className="px-8 py-12 max-w-md mx-auto sm:max-w-xl lg:px-12 lg:py-24 lg:max-w-full xl:mr-0">
             <div classNam="xl:max-w-xl ">
@@ -24,7 +25,9 @@ const MainPage = () => {
                     sapiente consectetur in illo nesciunt.</p>
 
                 <div className="mt-4 space-x-3 sm:mt-6">
-                    <a className ="btn btn-primary shadow-lg hover:-translate-y-0.5 transform transition" href="#"> Start Sell & Buy</a>
+                    <Link to="/crop">
+                    <a className ="btn btn-primary shadow-lg hover:-translate-y-0.5 transform transition" href="#"> Start Selling</a>
+                    </Link>
                     <a className ="btn btn-secondary" href="#">Learn more</a>
                 </div>
             </div>
@@ -36,7 +39,7 @@ const MainPage = () => {
         </div>
 
     </div>
-    
+    </section>
   )
 }
 
